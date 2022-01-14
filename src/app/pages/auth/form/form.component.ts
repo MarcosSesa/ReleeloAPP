@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-
+ 
+export interface FormOption{
+  option: string;
+}
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -9,6 +12,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class FormComponent implements OnInit {
 
   AuthForm!:FormGroup;
+  @Input() options!: FormOption
 
   constructor(
     private FormBuilder:FormBuilder
