@@ -9,7 +9,8 @@ import { FormOption } from 'src/app/pages/auth/form/form.component';
 export class SignInComponent implements OnInit {
  
   options:FormOption = {
-    option: 'signIn'
+    id: "signIn",
+    option: 'Iniciar Sesion'
   }
   
   constructor() { }

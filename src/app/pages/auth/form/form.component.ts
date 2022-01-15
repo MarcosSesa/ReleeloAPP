@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
  
 export interface FormOption{
+  id: string,
   option: string;
 }
 @Component({

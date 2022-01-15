@@ -9,7 +9,8 @@ import { FormOption } from 'src/app/pages/auth/form/form.component';
 export class SignUpComponent implements OnInit {
 
   options:FormOption = {
-    option: 'signUp'
+    id: "signUp",
+    option: 'Registrarse'
   }
 
   constructor() { }
