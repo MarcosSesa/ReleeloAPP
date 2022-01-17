@@ -20,13 +20,18 @@
     <button class="btn btn-primary" type="submit" style="width: 142.5px;background: #0f5636;">Button</button>
   </div>
 
-  <ng-container *ngif="options.id == 'signIn'; ">
-    <a [routerLink]="'[/signUp]'" class="text-black"> Registrarse</a>
-  </ng-container>
-
-  <ng-template *ngif="options.id == 'signUp'; ">
-    <a [routerLink]="'[/signIn]'" class="text-black">Ya tienes una cuenta?<small> Iniciar sesion</small></a>
-  </ng-template>
+  <div class="text-center" style="margin-top: 25px;">
+    <ng-container *ngIf="options.id == 'signIn'; ">
+      <a [routerLink]="['/signUp']" class="text-black" style="text-decoration: none;"> Registrarse</a>
+    </ng-container>
+  </div>
+  
+  <div class="text-center" style="margin-top: 25px;">
+    <ng-container *ngIf="options.id == 'signUp'; ">
+      <a [routerLink]="['/signIn']" class="text-black" style="text-decoration: none;">Ya tienes una cuenta?<small> Iniciar sesion</small></a>
+    </ng-container>
+  </div>
+  
 
 </form>
 

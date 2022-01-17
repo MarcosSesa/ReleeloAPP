@@ -3,12 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 import { style } from "@angular/animations";
+import { createClient } from "@supabase/supabase-js";
 
 export const environment = {
-  production: false,
+  production: true,
   SupabaseApiUrl: 'https://stfgpujtnwmzjltghsis.supabase.co',
-  SupabaseApiKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MTgwMzQyMywiZXhwIjoxOTU3Mzc5NDIzfQ.Be2xHvLsCGW3W9x_CTRvUoLf6qjvb6J0eAs0ELndNJ8'
-  
+  SupabaseApiKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0MTgwMzQyMywiZXhwIjoxOTU3Mzc5NDIzfQ.Be2xHvLsCGW3W9x_CTRvUoLf6qjvb6J0eAs0ELndNJ8',
+  SupabaseClient : createClient('SupabaseApiUrl','SupabaseApiKey')
 };
 
 /*
